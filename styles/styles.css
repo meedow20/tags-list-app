@@ -1,0 +1,56 @@
+.appContainer {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px double black;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.inputAndButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.inputAndButtonContainer button {
+    width: 150px;
+    border-radius: 25px;
+}
+
+.inputAndButtonContainer input {
+    width: 150px;
+    border-radius: 25px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.tagsContainer {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px double black;
+    border-radius: 20px;
+    padding: 0px 20px 20px 20px;
+}
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    border: 4px double black;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.tag button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}

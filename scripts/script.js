@@ -28,6 +28,9 @@ selectors.addTagButton.addEventListener('click', () => {
 })
 
 selectors.tagsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains("tagsContainer") || event.target.classList.contains("tag") || event.target.tagName === "SPAN") {
+        return;
+    }
     tagsList.splice(event.target.getAttribute('id'), 1)
     displayTags();
     localStorage.setItem('tags', JSON.stringify(tagsList));
@@ -49,7 +52,7 @@ function displayTags() {
         displayTags += `
         <div class="tag">
             <span>${item.tag}</span>
-            <button onclick="" type="submit" class="deleteTagButton"><i class="fa fa-close" id="${index}"></i></button>
+            <button type="submit" class="deleteTagButton"><i class="fa fa-close" onclick="" id="${index}"></i></button>
         </div>
         `;
         selectors.tagsContainer.innerHTML = displayTags;

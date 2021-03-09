@@ -2,7 +2,7 @@ const selectors = {
     addTag: document.querySelector('.tagInput'),
     addTagButton: document.querySelector('.addTagButton'),
     tagsContainer: document.querySelector('.tagsContainer'),
-    readOnlyCheckBox: document.querySelector('.readOnlyCheckBox'),
+    readOnlyCheckBox: document.querySelector('#readOnlyCheckBox'),
 }
 
 let tagsList = [];
@@ -28,7 +28,9 @@ selectors.addTagButton.addEventListener('click', () => {
 })
 
 selectors.tagsContainer.addEventListener('click', (event) => {
-    if (event.target.classList.contains("tagsContainer") || event.target.classList.contains("tag") || event.target.tagName === "SPAN") {
+    if (event.target.classList.contains("tagsContainer") || event.target.classList.contains("tag") ||
+        event.target.tagName === "SPAN"
+        || selectors.readOnlyCheckBox.checked) {
         return;
     }
     tagsList.splice(event.target.getAttribute('id'), 1)
